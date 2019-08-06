@@ -128,12 +128,11 @@ class Customer extends Person {
     super(name, x, y);
     this.wallet.money = 10;
   }
-  _isInRange = vendor => {
+  _isInRange = vendor =>
     this.location.distanceTo(vendor.location) <= vendor.range;
-  };
-  _haveEnoughMoney = (vendor, numberOfIceCreams) => {
+
+  _haveEnoughMoney = (vendor, numberOfIceCreams) =>
     this.wallet.money >= numberOfIceCreams * vendor.price;
-  };
 
   requestIceCream = (vendor, numberOfIceCreams) => {
     if (
